@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RFc-x4-PM6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beer Recommend View Controller-->
+        <scene sceneID="tO3-h1-9mn">
+            <objects>
+                <viewController storyboardIdentifier="BeerRecommendViewController" id="RFc-x4-PM6" customClass="BeerRecommendViewController" customModule="BeerRecommendNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lvs-6Z-5RD">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PMo-99-4aY">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CRI-if-GXE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fmO-UO-0oi">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N6v-ST-hR7">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="djK-tB-gkg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PMo-99-4aY" firstAttribute="top" secondItem="djK-tB-gkg" secondAttribute="top" id="2fa-cw-I9O"/>
+                            <constraint firstItem="djK-tB-gkg" firstAttribute="bottom" secondItem="PMo-99-4aY" secondAttribute="bottom" id="9PX-wc-KVG"/>
+                            <constraint firstItem="djK-tB-gkg" firstAttribute="trailing" secondItem="PMo-99-4aY" secondAttribute="trailing" id="Pgx-T4-1jn"/>
+                            <constraint firstItem="PMo-99-4aY" firstAttribute="leading" secondItem="djK-tB-gkg" secondAttribute="leading" id="qTi-Zy-Vxu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerCollectionView" destination="PMo-99-4aY" id="hYO-JE-NBJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEa-hH-DIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-120"/>
+        </scene>
+        <!--Beer Detail View Controller-->
+        <scene sceneID="2dr-Tx-co7">
+            <objects>
+                <viewController storyboardIdentifier="BeerDetailViewController" id="xsV-Xa-LEV" customClass="BeerDetailViewController" customModule="BeerRecommendNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BmF-ea-hUS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbB-sb-KzP">
+                                <rect key="frame" x="0.0" y="91" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qbB-sb-KzP" secondAttribute="height" multiplier="1:1" id="89L-cM-d85"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rSL-Bp-N6g">
+                                <rect key="frame" x="0.0" y="500" width="393" height="318"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dce-oJ-kdc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rSL-Bp-N6g" firstAttribute="top" secondItem="qbB-sb-KzP" secondAttribute="bottom" constant="16" id="6tW-ju-fvJ"/>
+                            <constraint firstItem="qbB-sb-KzP" firstAttribute="leading" secondItem="dce-oJ-kdc" secondAttribute="leading" id="TaQ-zF-gPx"/>
+                            <constraint firstItem="rSL-Bp-N6g" firstAttribute="leading" secondItem="dce-oJ-kdc" secondAttribute="leading" id="Y77-dM-pwC"/>
+                            <constraint firstItem="dce-oJ-kdc" firstAttribute="trailing" secondItem="qbB-sb-KzP" secondAttribute="trailing" id="cPm-Cd-2HE"/>
+                            <constraint firstItem="dce-oJ-kdc" firstAttribute="bottom" secondItem="rSL-Bp-N6g" secondAttribute="bottom" id="ffM-Rq-ayt"/>
+                            <constraint firstItem="dce-oJ-kdc" firstAttribute="trailing" secondItem="rSL-Bp-N6g" secondAttribute="trailing" id="kOm-zs-OQg"/>
+                            <constraint firstItem="qbB-sb-KzP" firstAttribute="top" secondItem="dce-oJ-kdc" secondAttribute="top" constant="32" id="y2r-PP-uuE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beerImageView" destination="qbB-sb-KzP" id="I7w-qy-289"/>
+                        <outlet property="beerTableView" destination="rSL-Bp-N6g" id="dfC-ky-sKT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wej-2Z-s2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="-120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
